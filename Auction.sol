@@ -93,13 +93,11 @@ contract Auction {
 
             uint winnerId = currentItem.itemTokens[randomIndex];
            winners[id]=bidders[winnerId].addr;     
-           
-                
+                 
             }
         }
     } 
     function getPersonDetails(uint id) public constant returns(uint,uint,address){
         return (bidders[id].remainingTokens,bidders[id].personId,bidders[id].addr);
     }
-
 }
